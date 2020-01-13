@@ -1,10 +1,10 @@
 
 ## Чтобы запустить проект, нужно:
 Склонировать репозиторий:
-$ git clone https://github.com/spureful/gulp-demo.git
+$ git clone https://github.com/spureful/extyl-pro-test
 
 Войти в папку с проектом:
-$ cd gulp-demo
+$ cd extyl-pro-test
 
 
 установить зависимости:  
