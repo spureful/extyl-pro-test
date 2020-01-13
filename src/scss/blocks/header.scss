@@ -1,0 +1,270 @@
+.header {
+    border-bottom: 1px solid #4991cc;
+    font-size: 14px;
+}
+
+.header__logo {
+    text-align: right;
+    margin-right: 58px;
+
+    @include netbook {
+        width: 35%;
+        margin-right: 3%;
+        text-align: left;
+         
+    }
+
+    @include phone {
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+.logo__img {
+    @include phone {
+        margin: 0 auto;
+    }
+}
+.logo__descr {
+    text-transform: uppercase;
+    color:#adb0b6;
+    font-size: 10px;
+    letter-spacing: 0.8px;
+    font-weight: 400;   
+    width: 171px; 
+   text-align: right;
+
+   
+    @include phone {
+        margin: 0 auto;
+    }
+}
+
+.header__departments {
+    padding-top: 19px;
+    margin-right: 59px;
+    text-align: right;
+
+    @include netbook {
+     margin-right: 0;
+   
+    }
+
+    @include tablet {
+        order: 3;
+       text-align: center;
+       margin: 0 auto;
+    }
+
+  
+}
+
+.header__departments-row {
+    display: flex;
+    margin-bottom: 17px;
+
+}
+
+.header__departments-col {
+   flex: 1;
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+    line-height: 1.1;
+     &:first-child {
+         padding-right: 44px;
+         position: relative;
+
+         &:after {
+             content: '';
+             width: 1px;
+             height: 45px;
+             background-color: #adb0b6;
+
+             position: absolute;
+             top: 5px;
+             right: 0;
+         }
+     }
+
+     &:last-child {
+         text-align: right;
+         margin-left: 44px;
+     }
+
+     @include phone {
+        &:first-child {
+            padding-right: 5%;
+           
+                    }
+   
+        &:last-child {
+        
+            margin-left: 5%;
+        }
+     }
+}
+
+.header__departments-title {
+    @include linkFont;
+}
+
+.header__departments-tel {
+    color: $black;
+    font-size: 14px;
+    text-decoration: none;
+
+    transition: .7s;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.header__departments-link {
+    @include linkFont;
+
+    text-decoration: none;
+    transition: .7s;
+
+    &:hover {
+        color: $black;
+    }
+}
+
+.header__info {
+    margin-right: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 19px;
+
+    @include netbook {
+        order: 4;
+        width: 60%;
+        margin-right: 0;
+        align-items: flex-end;
+    }
+
+    @include tablet {
+        // width: 90%;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    @include phone {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+   
+}
+
+.header__info-lk {
+    color: #fff;
+    padding: 15px 63px 15px 109px;
+    background-color: $blue;
+    background-image: url(../img/exit-icon.png);
+    background-repeat: no-repeat;
+    background-position: 64px center ;
+    white-space: nowrap;
+    margin-bottom: 17px;
+    transition: .7s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+    
+    @include phone {
+        width: 100%;
+    }
+}
+
+.header__info-request {
+    @include linkFont;
+
+    text-decoration: none;
+    margin-bottom:10px;
+}
+
+.header__info-mail {
+
+    @include linkFont;
+    margin-left: 42px;
+    text-decoration: none;
+    font-size: 18px;
+
+    transition: .7s;  
+    
+    &:hover{
+        transform: scale(1.1);
+    }
+
+    &:before {
+        content: '';
+        display: inline-block;
+        width: 31px;
+        height: 22px;
+        background-image: url(../img/mail-icon.png);
+        background-repeat: no-repeat;
+        margin-left: -42px;
+        margin-right: 10px;
+        vertical-align: middle;
+    }
+}
+
+.header__basket {
+display: flex;
+padding-top: 19px;
+
+    &:before {
+       flex-shrink: 0;
+        content: '';
+        display: inline-block;
+        width: 45px;
+        height: 45px;
+        background-color: $blue;
+        background-image: url(../img/basket-icon.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        margin-right: 5px;
+        vertical-align: middle;
+
+    }
+
+    @include netbook {
+        // width: 35%;
+       
+    }
+
+    @include tablet {
+        order: 2;
+        margin-right: 2%;
+    }
+
+    @include phone {
+        order: 4;
+        width: 100%;
+       justify-content: center;
+    }
+}
+.header__basket-col {
+    white-space: nowrap;
+    line-height: 1;
+}
+.header__basket-title {
+    color: $black;
+}
+
+.header__basket-goods {
+    @include linkFont
+    margin-bottom: 3px;
+}
+
+.header__basket-goodsnumber {
+    font-weight: 700;
+}
+
+.header__basket-pricenum {
+    font-weight: 700;
+}

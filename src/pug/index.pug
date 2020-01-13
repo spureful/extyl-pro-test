@@ -1,0 +1,42 @@
+include ./common/_mixins
+block variables
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		meta(content="ie=edge" http-equiv="x-ua-compatible")
+		meta(content="width=device-width, initial-scale=1" name="viewport")
+		title test task
+		link(rel='stylesheet' href='css/main.css')
+	
+	body
+		.wrapper
+			header.header
+				.container.container--header
+					.header__logo
+						.logo
+							+image('logo.png', 'logo', 'logo__img')
+							.logo__descr Оптовая продажа плитки и сантехники
+					.header__departments
+						.header__departments-row
+							.header__departments-col
+								h3.header__departments-title Проектный отдел
+								a(href="tel:84997242810").header__departments-tel +7 (499) 724 28 10
+							.header__departments-col
+								h3.header__departments-title Дилерский отдел
+								a(href="tel:84997242810").header__departments-tel +7 (499) 724 28 10
+								a(href="tel:84999897393").header__departments-tel +7 (499) 989 73 93
+						a(href="#").header__departments-link Не дозвонились? Мы перезвоним!
+					.header__info
+						button(type='button').header__info-lk Вход в личный кабинет
+						a(href="#").header__info-request Заявка на сотрудничество
+						a(href="mailto:info@artisan-project.ru").header__info-mail info@artisan-project.ru
+					.header__basket
+						.header__basket-col
+							.header__basket-title в вашей корзине 
+							.header__basket-goods
+								span.header__basket-goodsnumber 9999
+								|  товаров 
+							.header__basket-price на 
+								span.header__basket-pricenum 9 999 999 р.

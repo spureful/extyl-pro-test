@@ -1,0 +1,35 @@
+$blue: #4692ce;
+$black: #343f53;
+
+@function rem($px: 16px) {
+    @return ($px / 16px) + rem;
+}
+
+@mixin netbook {
+	@media screen and (max-width: 1165px) {
+		@content;
+	}
+}
+@mixin tablet {
+	@media screen and (max-width: 900px) {
+		@content;
+	}
+}
+
+@mixin phone {
+	@media screen and (max-width: 495px) {
+		@content;
+	}
+}
+
+
+@mixin linkFont {
+	font-size: 14px;
+	color: $blue;
+	letter-spacing: 0;
+	
+	border-bottom: 1px solid $blue;
+	display: inline-block;
+	// line-height: 1.2;
+	}
+
